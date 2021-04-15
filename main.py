@@ -9,18 +9,10 @@ def main():
    op = ''
    
    # Contatos para enviar a mensagem--------------------------------------------
-   contatos = [
-      'Grupinho da Baixada 🎩',
-      'Amanda Martins',
-      'Amigos do CSM 🎸🍻',
-      'Resenha Forever 🍺',
-      'Primos',
-      'Erica',
-      'Artur'
-   ]
+   contatos = ['Wagner','Arthur','Ex-CSM']
    
-   # Contatos para enviar a mensagem--------------------------------------------
-   mensagem = 'Testando um bot aqui rapidão, ignorem essa mensagem...'
+   # Mensagem para enviar aos contatos------------------------------------------
+   mensagem = 'Testando um bot...'
 
    while (op!='s') and (op!='S') and (op!='n') and (op!='N'):
       system('cls')
@@ -29,7 +21,7 @@ def main():
    
    if (op=='s') or (op=='S'):
       print('Enviando as mensagens...')
-      whatsapp = EdgeWhatsApp(r'C:\Users\Ilton\Source\Repos\wapp-bulk-send\edgedriver_win64\msedgedriver.exe')
+      whatsapp = EdgeWhatsApp(r'C:\edgedriver_win64\msedgedriver.exe')
       for contato in contatos:
          whatsapp.send_msg(contato, mensagem)   
       del whatsapp
